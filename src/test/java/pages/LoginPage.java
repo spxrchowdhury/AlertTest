@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends Baseclass {
     //@FindBy(xpath = "//i[@class='glyphicon glyphicon-new-window']")
-   // WebElement ClickloginButton;
+    // WebElement ClickloginButton;
     @FindBy(name = "j_username")
     WebElement Username;
     @FindBy(xpath = "(//input[@class='z-textbox'])[2]")
@@ -20,14 +20,17 @@ public class LoginPage extends Baseclass {
         super(driver);
     }
 
-    public void Login(){
+    public void Login() {
+        try {
+            Username.sendKeys(Utility.ADMINUSER_NAME);
+            Password.sendKeys(Utility.ADMIN_PASSWORD);
+            ClickSubmitButton.click();
 
-        Username.sendKeys(Utility.ADMINUSER_NAME);
-        Password.sendKeys(Utility.ADMIN_PASSWORD);
-        ClickSubmitButton.click();
+        } catch (Exception e) {
+            System.out.println("You have entered wrong username or password");
+        }
 
     }
-
 }
 
 
