@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/rchowdhury/Desktop/wm_client-master/Alerttesting">
+        <classes>
+            <class name="tests.Add_Alert_Test">
+                <methods>
+                    <include name="AlertAll"/>
+                </methods>
+            </class>
+            <class name="tests.Clone_Alert_Test">
+                <methods>
+                    <include name="CloneAlert"/>
+                </methods>
+            </class>
+            <class name="tests.Edit_Alert_Test">
+                <methods>
+                    <include name="editAlert"/>
+                </methods>
+            </class>
+            <class name="tests.Login_Test">
+                <methods>
+                    <include name="Loginwithcredential"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
