@@ -1,11 +1,13 @@
 package tests;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.*;
+
+import java.util.ArrayList;
 
 public class Execute_Test {
     public WebDriver driver = new ChromeDriver();
@@ -27,7 +29,7 @@ public class Execute_Test {
         alerlist.alertList();
     }
 
-     @AfterClass
+    @AfterClass
     public void teardown() throws InterruptedException {
         // *This method will logout first then browser will be closed.
         Logoutpage logout = new Logoutpage(driver);
@@ -37,13 +39,12 @@ public class Execute_Test {
 
 
     }
+
     @Test
-    public void executeAlert(){
+    public void executeAlert() {
 
         Execute_Page exct = new Execute_Page(driver);
-        exct.executealert();
-
-    }
-
+        exct.executealert();}
 
 }
+
